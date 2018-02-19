@@ -1,0 +1,20 @@
+server.port: 18084
+
+feign:
+  client:
+    config:
+      feignName:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+        decode404: false
+
+marathon.hosts:
+  dev: http://ufr-dev:8080
+  int: http://ufrappint1:8080
+  prelive: http://ufr-int1:8080
+#  dev: http://ufrmmtest1:8080
+#  int: http://ufrmmint1:8080
+#  prelive: http://ufrmmpr1:8080
+
+
