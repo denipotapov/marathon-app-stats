@@ -1,5 +1,6 @@
 package com.example.versions.model;
 
+import javax.validation.constraints.NotNull;
 import java.util.Arrays;
 
 /**
@@ -8,6 +9,7 @@ import java.util.Arrays;
 
 public class Group {
 
+    @NotNull
     private String id;
     private App[] apps;
     private Group[] groups;

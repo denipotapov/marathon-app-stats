@@ -1,10 +1,13 @@
 package com.example.versions.model;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * Created by U_021G1 on 16.02.2018.
  */
 public class App {
 
+    @NotNull
     private String id;
     private int instances;
     private float cpus;
