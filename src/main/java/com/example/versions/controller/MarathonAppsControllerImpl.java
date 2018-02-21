@@ -26,7 +26,7 @@ public class MarathonAppsControllerImpl implements MarathonAppsController {
     }
 
     @Override
-    @GetMapping(path = "/apps/old")
+    @GetMapping(path = "/apps")
     public String findAllApps(Model model) throws InterruptedException, ExecutionException {
 
         Set<App> dev = marathonApps.findDevApps().get().getApps();
