@@ -1,5 +1,7 @@
 server.port: 18084
 
+spring.mvc.favicon.enabled: false
+
 feign:
   client:
     config:

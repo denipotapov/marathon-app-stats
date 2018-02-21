@@ -9,6 +9,6 @@ import java.util.concurrent.ExecutionException;
  */
 public interface MarathonGroupsController {
 
-    String findAll(Model model) throws InterruptedException, ExecutionException;
+    String findAllGroups(Model model) throws InterruptedException, ExecutionException;
 
 }

@@ -14,6 +14,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -22,7 +23,6 @@ import java.util.concurrent.CompletableFuture;
 
 @Service
 @Transactional
-@Import(FeignClientsConfiguration.class)
 public class MarathonGroupsServiceImpl implements MarathonGroupsService {
 
     private final MarathonGroups groupsDev;

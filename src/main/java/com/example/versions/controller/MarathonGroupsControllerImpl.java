@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -28,15 +27,11 @@ public class MarathonGroupsControllerImpl implements MarathonGroupsController {
     //ToDo Rework to asynch UI
     @Override
     @GetMapping(path = "/groups")
-    public String findAll(Model model) throws InterruptedException, ExecutionException{
+    public String findAllGroups(Model model) throws InterruptedException, ExecutionException{
 
-        CompletableFuture<Group> dev = marathonGroupsService.findDevGroup();
-        CompletableFuture<Group> integration = marathonGroupsService.findIntegrationGroup();
-        CompletableFuture<Group> prelive = marathonGroupsService.findPreliveGroup();
-
-        model.addAttribute("dev", dev.get());
-        model.addAttribute("integration", integration.get());
-        model.addAttribute("prelive", prelive.get());
+        Group dev = marathonGroupsService.findDevGroup().get();
+        Group integration = marathonGroupsService.findIntegrationGroup().get();
+        Group prelive = marathonGroupsService.findPreliveGroup().get();
 
         return "env";
     }

@@ -1,0 +1,7 @@
+.tHeader {
+    text-align: center;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #ddeedc !important;
+}

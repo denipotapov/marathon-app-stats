@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 /**
  * Created by U_021G1 on 16.02.2018.
  */
-public class App {
+public class App implements Comparable{
 
     @NotNull
     private String id;
@@ -76,5 +76,10 @@ public class App {
                 ", disk=" + disk +
                 ", container=" + container +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return this.id.compareTo(((App)o).getId());
     }
 }

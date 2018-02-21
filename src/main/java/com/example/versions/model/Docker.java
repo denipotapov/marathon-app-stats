@@ -1,6 +1,7 @@
 package com.example.versions.model;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by U_021G1 on 16.02.2018.
@@ -9,7 +10,7 @@ public class Docker {
 
     private String image;
     private String network;
-    private Parameter[] parameters;
+    private List<Parameter> parameters;
 
     public Docker() {
     }
@@ -30,11 +31,11 @@ public class Docker {
         this.network = network;
     }
 
-    public Parameter[] getParameters() {
+    public List<Parameter> getParameters() {
         return parameters;
     }
 
-    public void setParameters(Parameter[] parameters) {
+    public void setParameters(List<Parameter> parameters) {
         this.parameters = parameters;
     }
 
@@ -43,7 +44,7 @@ public class Docker {
         return "Docker{" +
                 "image='" + image + '\'' +
                 ", network='" + network + '\'' +
-                ", parameters=" + Arrays.toString(parameters) +
+                ", parameters=" + parameters +
                 '}';
     }
 }

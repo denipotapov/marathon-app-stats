@@ -2,6 +2,7 @@ package com.example.versions.model;
 
 import javax.validation.constraints.NotNull;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by U_021G1 on 16.02.2018.
@@ -11,8 +12,8 @@ public class Group {
 
     @NotNull
     private String id;
-    private App[] apps;
-    private Group[] groups;
+    private List<App> apps;
+    private List<Group> groups;
 
     public Group() {
     }
@@ -25,19 +26,19 @@ public class Group {
         this.id = id;
     }
 
-    public App[] getApps() {
+    public List<App> getApps() {
         return apps;
     }
 
-    public void setApps(App[] apps) {
+    public void setApps(List<App> apps) {
         this.apps = apps;
     }
 
-    public Group[] getGroups() {
+    public List<Group> getGroups() {
         return groups;
     }
 
-    public void setGroups(Group[] groups) {
+    public void setGroups(List<Group> groups) {
         this.groups = groups;
     }
 
@@ -45,8 +46,8 @@ public class Group {
     public String toString() {
         return "Group{" +
                 "id='" + id + '\'' +
-                ", apps=" + Arrays.toString(apps) +
-                ", groups=" + Arrays.toString(groups) +
+                ", apps=" + apps +
+                ", groups=" + groups +
                 '}';
     }
 }
